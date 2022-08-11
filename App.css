@@ -1,0 +1,500 @@
+:root{
+  --base-color: crimson;
+  --transition:  all 1s ease-in-out;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  /* background-color: red; */
+}
+
+html::-webkit-scrollbar{                    
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 5rem;
+}
+
+img{
+  width: 100%;
+}
+
+.hand{
+
+  margin-left: 50px;
+}
+.griding{
+  width: 100%;
+  margin: 20px;
+  margin-top: 70px;
+  /* display: flex;
+  gap: 40px; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.card{
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+}
+@media (max-width: 1397px){
+  .card{
+    width: 280px;
+  }
+  .griding{
+    margin: 0;
+  }
+}
+@media (max-width: 1224px){
+  .card{
+    width: 250px;
+  }
+ 
+}
+@media (max-width: 1130px){
+  .griding{
+  grid-template-columns: repeat(3, 1fr);
+  }
+  .card{
+    width: 300px;
+  }
+}
+@media (max-width: 885px){
+  .griding{
+  grid-template-columns: repeat(2, 1fr);
+  }
+  .card{
+    width: 300px;
+  }
+}
+@media (max-width: 580px){
+  .griding{
+    padding-right: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card{
+    width: 100%;
+  }
+}
+
+
+.card-body{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-text{
+  color: grey;
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.card button{
+  padding: 10px 30px;
+  border: 0;
+  transition: 0.3s ease;
+}
+.card button:hover{
+  background-color: var(--base-color);
+  color: white;
+  border-radius: 5px;
+ 
+}
+.card img:hover{
+    transform: scale(1.2);
+    transition: var(--transition);
+}
+.navbar-nav{
+  position: absolute;
+  right: 10px;
+}
+.adminUpload{
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 20px;
+}
+.adminUpload h4{
+    text-decoration: underline black 1px;
+    padding: 10px 0;
+    color: var(--base-color);
+ }
+ 
+.upload{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.upload p{
+  padding: 12px 20px;
+  background-color: var(--base-color);
+  color: white;
+  font-weight: 500;
+  border-radius: 7px;
+}
+.navbar-brand{
+  color: var(--base-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+.Create{
+  max-width: 400px;
+  margin:  auto;
+  text-align: center;
+}
+.Create h1{
+  font-weight: 100;
+}
+.Create label{
+  text-align: left;
+  display: block;
+  font-size: 20px;
+}
+.Create h2{
+  color: var(--base-color);
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.Create input, .Create textarea, .Create select{
+  width: 100%;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.Create button{
+  padding: 10px 15px;
+  background: var(--base-color);
+  color: white;
+  border-radius: 8px;
+  padding: 15px 50px;
+  font-size: 20px;
+} 
+.container-fluid,.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 999;
+}
+
+/* Cart */
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+
+}
+.carBox{
+  width: 90%;
+  height: 600px;
+  /* border: 1px solid var(--base-color); */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  overflow-y: scroll;
+  margin-top: 50px;
+}
+.carBox::-webkit-scrollbar{                    
+  width: .8rem;
+}
+
+.carBox::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+
+
+.carBox .cardItem{
+    width: 330px;
+    height: 350px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+}
+.carBox img{
+  width: 50%;
+}
+.halveTop{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seconHalve{
+  height: 40%;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0 15px;
+}
+
+.cartText{
+  display: flex;
+  justify-content: space-between;
+}
+span{
+  font-weight: 900;
+  background-color: var(--base-color);
+  color: white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.lastHold{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  gap: 80px;
+}
+
+
+.secTExt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.name{
+  font-size: 20px;
+}
+.imgHOld{
+  width: 100%;
+  height: 200px;
+  background-color: rgb(239, 239, 239);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.card-img-top{
+
+  object-fit: cover;
+}
+.amoutPick{
+  position: absolute;
+  right: 57px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  padding: 3px 3px;
+}
+.pop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+/* .pend{
+  position: absolute;
+  top: 50px;
+} */
+.show{
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.noItemAdded{
+  position: absolute;
+  z-index: 999;
+  top: 10%;
+  left: 10%;
+  color: red;
+}
+.cartFinal {
+  padding: 17px 20px;
+  border: 0;
+  background-color: var(--base-color);
+  color: white;
+  border-radius: 10px;
+  margin: 0 20px;
+  font-size: 18px;
+}
+.head{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  font-weight: 100;
+  text-transform: capitalize;
+  z-index: 999;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  
+}
+.cartDelete{
+  position: absolute;
+  right: 0%;
+  bottom: 0;
+  padding: 3px 25px; 
+  background-color: var(--base-color);
+  color: white;
+  border: 0;
+ font-size: 18px;
+
+}
+.butt button{
+  margin: 0 10px;
+}
+.body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(249, 249, 249);
+}
+.bodyBox{
+
+  width: 800px;
+  background-color: white;
+}
+.SignContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 30px 0;
+  overflow: hidden;
+}
+.signupBox{
+  width: 500px;
+  /* height: 100%; */
+  /* height: 80%; */
+  box-shadow: 2px 2px 2px #ccc;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.SignContainer .col-md-4{
+  width: 100%;
+}
+.SignContainer button{
+  padding: 20px 0;
+  border: 0;
+  transition: var(--transition);
+}
+.SignContainer button:hover{
+  background-color: var(--base-color);
+  color: white;
+}
+.SignContainer label{
+  font-weight: 900;
+}
+.SignContainer input{
+  padding: 10px 0;
+}
+.alert{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  margin-top: 80px;
+
+}
+#alertBox{
+  width: 30%;
+  height: 50%;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  box-shadow: 4px 4px 4px rgb(138, 138, 138);
+  padding: 30px;
+}
+.block{
+  display: block;
+}
+.none{
+  display: none;
+}
+.loginButton button{
+  margin: 0 10px;
+  padding: 15px 20px;
+}
+.greetUser{
+  position: absolute;
+  left: 15%;
+}
+.AllClientDetails{
+  margin-top: 8%;
+}
+h1{
+  font-weight: 100;
+  /* font-size: 70px; */
+}
+table{
+  overflow-y: visible;
+}
+#VarifiyButton{
+  margin: 0 20px;
+  font-weight: 900;
+  color: black;
+  text-decoration: none;
+}
+.cart{
+  margin: 0 20px;
+}
+#AdminDash{
+ border: none;
+ text-decoration: none; 
+}
+Link{
+  text-decoration: none;
+}
+.adminDashBoard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+.userAdminTable{
+  width: 50%;
+  margin-top: 30px;
+}
+.modal{
+  margin-top: 200px;
+}
+.error{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.error h1{
+  font-size: 30px;
+  color: red;
+}
